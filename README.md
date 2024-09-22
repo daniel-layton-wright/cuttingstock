@@ -4,6 +4,12 @@ This implements a solution to the cutting stock problem using the Dantzig-Wolfe 
 
 ## Usage and Input
 
+Details about usage can be found by running:
+
+```
+python cutting_stock.py --help
+```
+
 To run the script and obtain a solution, use the following command:
 
 ```
@@ -31,6 +37,15 @@ For example:
 30 5
 40 15
 ```
+
+### Time Limit
+After column generation is complete, the program solves the integer master problem but this can be slow depending on the problem. The solver will stop and use the best solution found after a specified time limit. To set the limit use the `--time_limit` flag:
+
+```
+python cutting_stock.py <input_file> <output_file> --time_limit <time_limit>
+```
+
+The default time limit is 60 seconds.
 
 ## Output
 
